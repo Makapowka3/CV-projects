@@ -1,23 +1,21 @@
-# Moving Average Crossover — Backtest & Heatmap
+# Moving Average Crossover Strategy
 
-A compact Python tool to **generate trading signals** from a simple moving average (SMA) crossover, **backtest** the strategy with transaction costs, and **visualize** results (equity curves, buy/sell markers, and a parameter heatmap).
+This project implements a **simple technical trading strategy** based on moving averages.  
+The idea is to generate buy/sell signals when a short-term moving average crosses a long-term moving average.
 
 ---
 
 ## Features
-- **Signals:** SMA(fast) vs SMA(slow) crossover
-- **Backtest:** daily returns, transaction costs, equity curves
-- **Metrics:** Sharpe, CAGR, Max Drawdown
-- **Plots:** 
-  - Equity curves (Strategy vs Buy & Hold)
-  - Buy/Sell markers on price
-  - SMA grid-search **heatmap** for parameter tuning (Sharpe or CAGR)
+- **Signals:** Buy when short-term SMA > long-term SMA, sell otherwise  
+- **Backtest engine:** Calculates daily returns, applies transaction costs, builds equity curves  
+- **Performance metrics:** Sharpe ratio, CAGR (compound annual growth rate), Maximum Drawdown  
+- **Plots:**  
+  - Equity curves (Strategy vs Buy & Hold)  
+  - Buy/Sell markers on the price series  
+  - Heatmap grid-search for tuning SMA parameters
 
 ---
 
-## Methods (quick math)
- 
-- **Metrics:**
-  - **Sharpe** (annualized): $\frac{\bar r}{\sigma_r}\sqrt{252}$
-  - **CAGR:** $\left(\frac{\text{ending}}{\text{starting}}\right)^{1/\text{years}} - 1$
-  - **MaxDD:** $1 - \min_t \frac{V_t}{\max_{s \le t} V_s}$
+## Benchmarks
+- **Buy & Hold** on the selected asset  
+- **Crossover Strategy** with user-chosen SMA windows  
