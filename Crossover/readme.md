@@ -16,9 +16,7 @@ A compact Python tool to **generate trading signals** from a simple moving avera
 ---
 
 ## Methods (quick math)
-
-- **Signal:** `1` if `SMA_fast > SMA_slow` else `0`  
-- **Strategy return:** `Market_Return × Signal – TX_COST × |Position_Change|`  
+ 
 - **Metrics:**
   - **Sharpe** (annualized): $\frac{\bar r}{\sigma_r}\sqrt{252}$
   - **CAGR:** $\left(\frac{\text{ending}}{\text{starting}}\right)^{1/\text{years}} - 1$
